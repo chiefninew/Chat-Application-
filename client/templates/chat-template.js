@@ -13,18 +13,19 @@ Template.appChat.events({
 		Messages.remove(this._id);
 		return false;
 	},
-	"keyup .txtText": function (event){
-		if(event.keyCode == 13){
+
+	"click .submit": function (event){
 
 			Messages.insert({
-				name: $(".txtName").val(),
-				text: $(".txtText").val(),
+				name: $(".name").val(),
+				age: $(".age").val(),
+				gender: $(".gender").val(),
+				address: $(".address").val(),
+				course: $(".course").val(),
+				status: $(".status").val(),
 				createdAt: new Date()
 			})
-		}
 
-		false;
-	}
-
+	},
 
 });
